@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shri Kalabhairaveshwara Swami Temple - Budigenahalli</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fdf6ec;
+      color: #3b2a1a;
+      line-height: 1.6;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      background: linear-gradient(160deg, #8b1a1a 0%, #b22222 45%, #d9691e 100%);
+      color: #fff;
+      padding: 55px 20px 70px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero::before, .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+    }
+    .hero::before { width: 280px; height: 280px; top: -100px; left: -80px; }
+    .hero::after { width: 220px; height: 220px; bottom: -90px; right: -60px; }
+    .hero-icon {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 14px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 1.9rem;
+      margin-bottom: 6px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero p {
+      color: #ffe6d1;
+      font-size: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+    .hero .rating-pill {
+      display: inline-block;
+      margin-top: 14px;
+      background: rgba(255,255,255,0.18);
+      backdrop-filter: blur(4px);
+      padding: 6px 18px;
+      border-radius: 30px;
+      font-weight: bold;
+      position: relative;
+      z-index: 1;
+    }
+
+    main {
+      max-width: 900px;
+      margin: -35px auto 0;
+      padding: 0 20px 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 22px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+    }
+    .card h2 {
+      color: #8b1a1a;
+      margin-bottom: 14px;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* QUICK ACTIONS - TTD app style grid */
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+    .quick-item {
+      background: #fff;
+      border-radius: 12px;
+      padding: 18px 10px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-decoration: none;
+      color: #3b2a1a;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: transform 0.15s;
+    }
+    .quick-item:hover { transform: translateY(-3px); }
+    .quick-item .emoji { font-size: 1.8rem; display: block; margin-bottom: 6px; }
+
+    /* DARSHAN TIMINGS */
+    .timing-table { width: 100%; border-collapse: collapse; }
+    .timing-table td { padding: 10px 6px; border-bottom: 1px solid #f1e4d4; }
+    .timing-table td:first-child { font-weight: 600; color: #8b1a1a; }
+    .timing-table td:last-child { text-align: right; color: #5a4a3a; }
+
+    /* GALLERY */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+    }
+    .gallery-placeholder {
+      aspect-ratio: 1;
+      border-radius: 10px;
+      background: repeating-linear-gradient(45deg, #fdf1e0, #fdf1e0 10px, #fbe6cc 10px, #fbe6cc 20px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #b28a5c;
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 10px;
+      border: 2px dashed #e0b98a;
+    }
+
+    /* MAP */
+    .map-wrapper { border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0,0,0,0.08); }
+    iframe { width: 100%; height: 380px; border: 0; display: block; }
+    .btn-row { margin-top: 15px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block;
+      background: #b22222;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #8b1a1a; }
+    .btn.secondary { background: #fff; color: #b22222; border: 2px solid #b22222; }
+    .btn.secondary:hover { background: #fdf1ec; }
+
+    /* REVIEWS */
+    .review {
+      background: #fdf6ec;
+      border-left: 4px solid #b22222;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      font-style: italic;
+      color: #5a4a3a;
+    }
+
+    footer { text-align: center; padding: 25px; color: #8a7a6a; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <svg class="hero-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="60" cy="60" r="55" fill="rgba(255,255,255,0.12)"/>
+      <!-- Trishul (trident) -->
+      <g stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round">
+        <line x1="60" y1="30" x2="60" y2="95"/>
+        <path d="M60 30 C 50 20, 45 15, 42 5"/>
+        <path d="M60 30 C 70 20, 75 15, 78 5"/>
+        <line x1="60" y1="30" x2="60" y2="8"/>
+        <line x1="45" y1="65" x2="75" y2="65"/>
+      </g>
+      <!-- Om symbol -->
+      <text x="60" y="60" font-size="26" fill="#ffd28a" text-anchor="middle" font-family="serif" dy="8">ॐ</text>
+    </svg>
+    <h1>Shri Kalabhairaveshwara Swami Temple</h1>
+    <p>Budigenahalli, Karnataka 561206</p>
+    <div class="rating-pill">⭐ 4.7 / 5 &nbsp;·&nbsp; 15 Reviews</div>
+  </div>
+
+  <main>
+
+    <div class="quick-grid">
+      <a class="quick-item" href="https://www.google.com/maps/dir/?api=1&destination=13.5815853,77.5833369" target="_blank" rel="noopener">
+        <span class="emoji">🧭</span>Directions
+      </a>
+      <a class="quick-item" href="#timings">
+        <span class="emoji">🕉️</span>Darshan Timings
+      </a>
+      <a class="quick-item" href="#gallery">
+        <span class="emoji">📷</span>Gallery
+      </a>
+      <a class="quick-item" href="#reviews">
+        <span class="emoji">🙏</span>Devotee Reviews
+      </a>
+    </div>
+
+    <div class="card" id="timings">
+      <h2>🕉️ Darshan Timings</h2>
+      <table class="timing-table">
+        <tr><td>Morning Darshan</td><td>6:00 AM – 12:00 PM</td></tr>
+        <tr><td>Afternoon Break</td><td>12:00 PM – 4:00 PM</td></tr>
+        <tr><td>Evening Darshan</td><td>4:00 PM – 8:30 PM</td></tr>
+        <tr><td>Special Pooja Days</td><td>Extended hours</td></tr>
+      </table>
+      <p style="margin-top:10px; font-size:0.85rem; color:#8a7a6a;">
+        * Sample timings — please update with the temple's actual schedule.
+      </p>
+    </div>
+
+    <div class="card" id="gallery">
+      <h2>📷 Temple Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-placeholder">Add temple photo<br>(sanctum)</div>
+        <div class="gallery-placeholder">Add temple photo<br>(entrance)</div>
+        <div class="gallery-placeholder">Add temple photo<br>(festival)</div>
+        <div class="gallery-placeholder">Add deity photo<br>(Kalabhairava)</div>
+      </div>
+      <p style="margin-top:10px; font-size:0.85rem; color:#8a7a6a;">
+        Replace these placeholders with your own temple photos — see instructions below the code.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>📍 Location</h2>
+      <p>Plus Code: <strong>HHJM+J8P</strong>, Budigenahalli, Karnataka 561206, India</p>
+      <div class="map-wrapper" style="margin-top: 15px;">
+        <iframe
+          src="https://maps.google.com/maps?q=13.5815853,77.5833369(Shri+Kalabhairaveshwara+Swami+Temple)&z=16&output=embed"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <div class="btn-row">
+        <a class="btn" href="https://maps.google.com/?cid=12708773729464913783" target="_blank" rel="noopener">📍 Open in Google Maps</a>
+        <a class="btn secondary" href="https://www.google.com/maps/dir/?api=1&destination=13.5815853,77.5833369" target="_blank" rel="noopener">🧭 Get Directions</a>
+      </div>
+    </div>
+
+    <div class="card" id="reviews">
+      <h2>🙏 What Devotees Say</h2>
+      <div class="review">"May Kalabhairava bless you all. The sculpture of the Kalabhairava is just mesmerising. Worth travelling to this temple."</div>
+      <div class="review">"Every time I visit, I am overcome with feelings of joy and happiness. The serenity of the shrine brings tranquillity to my mind."</div>
+      <div class="review">"Powerful God. Brings peace to you. A lot of devotees for this god."</div>
+    </div>
+
+  </main>
+
+  <footer>
+    &copy; 2026 Shri Kalabhairaveshwara Swami Temple, Budigenahalli. Made with devotion.
+  </footer>
+
+</body>
+</html>
